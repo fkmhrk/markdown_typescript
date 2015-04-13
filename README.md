@@ -1,7 +1,11 @@
 # markdown
 Markdown library in TypeScript. You can use comiled js library which is in bin folder.
 
+In github implementation, just use github markdown API (https://developer.github.com/v3/markdown/)
+
 # How to use
+
+## github API
 
 - Add jQuery and this library
 ```
