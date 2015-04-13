@@ -6,7 +6,7 @@ module markdown {
         toHTML(source : string, callback : Callback);
     }
 
-    export interface Calllback {
+    export interface Callback {
         /**
          * This method will be called when execution is succeeded.
          */
