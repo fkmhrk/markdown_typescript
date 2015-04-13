@@ -19,7 +19,7 @@ In github implementation, just use github markdown API (https://developer.github
 var client = new github.Client();
 ```
 
-- call toHTML methdo
+- call toHTML method
 
 ```
   // #source is textarea
@@ -33,5 +33,25 @@ var client = new github.Client();
       console.log('error status=' + status + ' body=' + body);
     }
   });
+```
+
+
+## example
+
+```
+function compile() {
+  var client = new github.Client();
+  // #source is textarea
+  var source = $('#source').val();
+  client.toHTML(source, {
+    success : function(html, limit) {
+      $('#out').html(html);
+      $('#limit').html('limit=' + limit);
+    },
+    error : function(status, body) {
+      console.log('error status=' + status + ' body=' + body);
+    }
+  });  
+}
 ```
 
